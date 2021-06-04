@@ -1,4 +1,4 @@
-package org.medusar.mybatis.generator.support;
+package io.github.medusar.mybatis.generator.support;
 
 import java.util.Properties;
 
