@@ -43,20 +43,22 @@ public class SimpleCommentGenerator implements CommentGenerator {
 
     @Override
     public void addModelClassComment(TopLevelClass topLevelClass, IntrospectedTable introspectedTable) {
-
+        topLevelClass.addJavaDocLine("/**");
+        topLevelClass.addJavaDocLine(" * " + introspectedTable.getRemarks());
+        topLevelClass.addJavaDocLine(" */");
     }
 
     @Override
     public void addClassComment(InnerClass innerClass, IntrospectedTable introspectedTable) {
         innerClass.addJavaDocLine("/**");
-        innerClass.addJavaDocLine(" * " + introspectedTable.getFullyQualifiedTable());
+        innerClass.addJavaDocLine(" * " + introspectedTable.getRemarks());
         innerClass.addJavaDocLine(" */");
     }
 
     @Override
     public void addClassComment(InnerClass innerClass, IntrospectedTable introspectedTable, boolean markAsDoNotDelete) {
         innerClass.addJavaDocLine("/**");
-        innerClass.addJavaDocLine(" * " + introspectedTable.getFullyQualifiedTable());
+        innerClass.addJavaDocLine(" * " + introspectedTable.getRemarks());
         innerClass.addJavaDocLine(" */");
     }
 
@@ -93,4 +95,5 @@ public class SimpleCommentGenerator implements CommentGenerator {
     public void addRootComment(XmlElement rootElement) {
 
     }
+
 }
