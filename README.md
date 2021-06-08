@@ -9,7 +9,7 @@
 
 [![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Maven central](https://maven-badges.herokuapp.com/maven-central/io.github.medusar/mybatis-generator-support/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.medusar/mybatis-generator-support)
-
+[![Project status](https://img.shields.io/badge/Project%20status-Active-brightgreen)](https://img.shields.io/badge/Project%20status-Active-brightgreen)
 </div>
 
 ***
