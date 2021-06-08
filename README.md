@@ -1,5 +1,24 @@
-# mybatis-generator-support
-some extensions for mybatis generator.
+***
+
+<div align="center">
+    <b><em>MyBatis-Generator-Support</em></b><br>
+    Useful extensions for <a href="https://github.com/mybatis/generator">MyBatis-Generator(MGB)</a> to make your life easier.
+</div>
+
+<div align="center">
+
+[![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![Maven central](https://maven-badges.herokuapp.com/maven-central/io.github.medusar/mybatis-generator-support/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.medusar/mybatis-generator-support)
+
+</div>
+
+***
+
+## Plugins
+```xml
+<plugin type="io.github.medusar.mybatis.generator.plugin.MapperBatchInsertPlugin"/>
+<plugin type="io.github.medusar.mybatis.generator.plugin.ExampleRenamePlugin"/>
+```
 
 ## Quick start
 
