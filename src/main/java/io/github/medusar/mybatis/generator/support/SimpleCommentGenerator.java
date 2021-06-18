@@ -1,5 +1,7 @@
 package io.github.medusar.mybatis.generator.support;
 
+import static org.mybatis.generator.internal.util.StringUtility.isTrue;
+
 import java.util.Properties;
 
 import org.mybatis.generator.api.CommentGenerator;
@@ -15,10 +17,14 @@ import org.mybatis.generator.api.dom.xml.XmlElement;
 
 public class SimpleCommentGenerator implements CommentGenerator {
 
+    public static final String CONFIG_FIELD_ADD_DEFAULT_VALUE = "addDefaultValue";
+
     /**
      * The properties.
      */
     private final Properties properties;
+
+    private boolean addDefaultValue = false;
 
     public SimpleCommentGenerator() {
         this.properties = new Properties();
@@ -26,6 +32,7 @@ public class SimpleCommentGenerator implements CommentGenerator {
 
     public void addConfigurationProperties(Properties properties) {
         this.properties.putAll(properties);
+        addDefaultValue = isTrue(properties.getProperty(CONFIG_FIELD_ADD_DEFAULT_VALUE));
     }
 
     @Override
@@ -33,6 +40,9 @@ public class SimpleCommentGenerator implements CommentGenerator {
                                 IntrospectedColumn introspectedColumn) {
         field.addJavaDocLine("/**"); //$NON-NLS-1$
         field.addJavaDocLine(" * " + introspectedColumn.getRemarks());
+        if (addDefaultValue) {
+            field.addJavaDocLine(" * default value in database:'" + introspectedColumn.getDefaultValue() + "'");
+        }
         field.addJavaDocLine(" */");
     }
 
