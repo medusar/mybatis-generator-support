@@ -57,6 +57,8 @@
 ```
 <commentGenerator type="io.github.medusar.mybatis.generator.support.SimpleCommentGenerator"/>
 ```
+FYI: if you want your table comments to be added to the entity class, you will need to add `useInformationSchema=true` in your connection url.
+
 
 ### 3. Run mybatis generator
 
