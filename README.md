@@ -68,3 +68,7 @@ so you should make sure the versions match.
 | mybatis-generator-core | mybatis-generator-support |
 | -- | -- |
 | <= 1.3.5 | 0.0.1 | 
+
+
+## Developer Guide
+- [How to release an artifact into repository](https://central.sonatype.org/publish/publish-maven/)
